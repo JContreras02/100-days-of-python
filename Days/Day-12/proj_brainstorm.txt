@@ -1,0 +1,10 @@
+Day 12: Number Guessing Game Project
+
+Users will have certain number of tries depending on chosen difficulty.
+
+1. Have welcome message for users
+2. Have user choose either easy or hard mode
+3. If user chooses easy give 10 attempts, if user chooses hard only 5 attempts
+4. User will make a guess and will be told either "Too High" or "Too Low" if they did not guess the number
+5. User will keep guessing until attempts run out or if they chose the number before attempts run out
+6. User will be told if they guess the number or if they ran out of attempts
