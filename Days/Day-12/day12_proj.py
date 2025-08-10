@@ -6,6 +6,7 @@ print(logo)
 EASY_LEVEL_TURNS = 10
 HARD_LEVEL_TURNS = 5
 
+'''
 def game_logic(rand_num, attempts):
     guess = int(input("Make a guess: "))
     if guess == rand_num:
@@ -34,6 +35,7 @@ def game_logic(rand_num, attempts):
             game_logic(rand_num, attempts)
         print(f"You've run out of guesses. The number was {rand_num}.")
         print("Please re-run the code to play again!")
+'''
 
 
 
@@ -57,3 +59,4 @@ print(f"You have {turns} remaining to guess the number.\n")
 
 guess = int(input("Make a guess: "))
 
+check_answer(guess, rand_num)
