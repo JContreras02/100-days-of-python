@@ -3,6 +3,9 @@ import random
 
 print(logo)
 
+EASY_LEVEL_TURNS = 10
+HARD_LEVEL_TURNS = 5
+
 def game_logic(rand_num, attempts):
     guess = int(input("Make a guess: "))
     if guess == rand_num:
@@ -32,19 +35,25 @@ def game_logic(rand_num, attempts):
         print(f"You've run out of guesses. The number was {rand_num}.")
         print("Please re-run the code to play again!")
 
+
+
+def set_difficulty():
+    """Sets either easy or hard difficulty."""
+    difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
+    if difficulty == "easy":
+        return EASY_LEVEL_TURNS
+    elif difficulty == "hard":
+        return HARD_LEVEL_TURNS
+
+
+
 print("Welcome to the Number Guessing Game!")
 print("Im thinking of a number between 1 and 100.")
-difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
+
 rand_num = random.randint(1,100)
+turns = set_difficulty()
 
-if difficulty == "easy":
-    attempts = 10
-    print(f"You have {attempts} remaining to guess the number.\n")
-    game_logic(rand_num, attempts)
-elif difficulty == "hard":
-    attempts = 5
-    print(f"You have {attempts} remaining to guess the number.\n")
-    game_logic(rand_num, attempts)
+print(f"You have {turns} remaining to guess the number.\n")
 
-
+guess = int(input("Make a guess: "))
 
