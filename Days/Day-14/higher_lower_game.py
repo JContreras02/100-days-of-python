@@ -1,16 +1,18 @@
-from art import logo
-from art import vs
+from art import logo, vs
 from game_data import data
 import random
 
 def random_generation():
-    """"""
-    random.randint(0, len(data) - 1)
+    """Return a random piece of data from the list."""
+    return random.choice(data)
 
+def data_comparison():
+    return
 
 print(logo)
 
-print(vs)
+choice_a = random_generation()
+choice_b = random_generation()
 
-print(data[0]['name'])
-print(data[0]['follower_count'])
+print(choice_a['name'])
+print(choice_b)
